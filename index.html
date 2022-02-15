@@ -17,10 +17,34 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    IP Address Tracker Search for any IP address or domain IP Address Location
-    Timezone UTC
-    <!-- add offset value dynamically using the API -->
-    ISP
+    <main>
+      <h1 class="main-heading">IP Address Tracker</h1>
+      <form action="">
+        <label for="ip-search">Search for any IP address or domain</label>
+        <input type="search" name="ip-search" id="ip-search" />
+        <button type="submit">
+          <img src="images/icon-arrow.svg" alt="" />
+        </button>
+      </form>
+      <section>
+        <div>
+          <h2 class="subheading">IP Address</h2>
+          <span id="ip-address" class="search-result"></span>
+        </div>
+        <div>
+          <h2 class="subheading">Location</h2>
+          <span id="location" class="search-result"></span>
+        </div>
+        <div>
+          <h2 class="subheading">Timezone</h2>
+          <span class="search-result">UTC <span id="timezone"></span></span>
+        </div>
+        <div>
+          <h2 class="subheading">ISP</h2>
+          <span id="isp" class="search-result"></span>
+        </div>
+      </section>
+    </main>
     <footer>
       <p class="attribution">
         Challenge by
