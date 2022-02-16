@@ -14,19 +14,32 @@
 
     <title>Frontend Mentor | IP Address Tracker</title>
 
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <main>
       <h1 class="main-heading">IP Address Tracker</h1>
-      <form action="">
-        <label for="ip-search">Search for any IP address or domain</label>
-        <input type="search" name="ip-search" id="ip-search" />
-        <button type="submit">
+      <form id="search-form">
+        <label for="user-search" class="visually-hidden"
+          >Search for any IP address or domain</label
+        >
+        <input
+          type="search"
+          name="user-search"
+          id="user-search"
+          placeholder="Search for any IP address or domain"
+        />
+        <button type="submit" class="btn">
           <img src="images/icon-arrow.svg" alt="" />
         </button>
       </form>
-      <section>
+      <section class="results">
         <div>
           <h2 class="subheading">IP Address</h2>
           <span id="ip-address" class="search-result"></span>
@@ -44,6 +57,7 @@
           <span id="isp" class="search-result"></span>
         </div>
       </section>
+      <div id="map"></div>
     </main>
     <footer>
       <p class="attribution">
@@ -55,6 +69,11 @@
       </p>
     </footer>
 
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
     <script src="js/app.js"></script>
   </body>
 </html>
