@@ -21,11 +21,13 @@
       crossorigin=""
     />
     <link rel="stylesheet" href="css/styles.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <main>
       <h1 class="main-heading">IP Address Tracker</h1>
-      <form id="search-form">
+      <form id="search-form" method="GET">
         <label for="user-search" class="visually-hidden"
           >Search for any IP address or domain</label
         >
