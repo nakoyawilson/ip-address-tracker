@@ -20,6 +20,11 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
 
+// Position control
+// L.Control.Zoom.setPosition("bottomleft").addTo(map);
+// L.Control.Zoom({ position: "bottomleft" }).addTo(map);
+map.zoomControl.setPosition("bottomleft");
+
 // Functions
 
 onLocationFound = (e) => {

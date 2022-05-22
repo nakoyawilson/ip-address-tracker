@@ -20,14 +20,15 @@
       integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
       crossorigin=""
     />
+    <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/styles.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
-    <main>
+    <header class="header">
       <h1 class="main-heading">IP Address Tracker</h1>
-      <form id="search-form" method="GET">
+      <form id="search-form" method="GET" class="form">
         <label for="user-search" class="visually-hidden"
           >Search for any IP address or domain</label
         >
@@ -36,30 +37,35 @@
           name="user-search"
           id="user-search"
           placeholder="Search for any IP address or domain"
+          class="form-input"
         />
         <button type="submit" class="btn">
           <img src="images/icon-arrow.svg" alt="" />
         </button>
       </form>
+    </header>
+    <main class="main">
       <section class="results">
-        <div>
+        <div class="results-wrapper">
           <h2 class="subheading">IP Address</h2>
-          <span id="ip-address" class="search-result"></span>
+          <span id="ip-address" class="search-result">192.212.174.101</span>
         </div>
-        <div>
+        <div class="results-wrapper">
           <h2 class="subheading">Location</h2>
-          <span id="location" class="search-result"></span>
+          <span id="location" class="search-result">Brooklyn, NY 10001</span>
         </div>
-        <div>
+        <div class="results-wrapper">
           <h2 class="subheading">Timezone</h2>
-          <span class="search-result">UTC <span id="timezone"></span></span>
+          <span class="search-result"
+            >UTC <span id="timezone">-05:00</span></span
+          >
         </div>
-        <div>
+        <div class="results-wrapper">
           <h2 class="subheading">ISP</h2>
-          <span id="isp" class="search-result"></span>
+          <span id="isp" class="search-result">SpaceX Starlink</span>
         </div>
       </section>
-      <div id="map"></div>
+      <div id="map" class="map"></div>
     </main>
     <footer>
       <p class="attribution">
@@ -70,7 +76,6 @@
         <a href="https://nakoyawilson.netlify.app/">Nakoya Wilson</a>.
       </p>
     </footer>
-
     <script
       src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
       integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="

@@ -18,3 +18,7 @@
 /design
 README-template.md
 style-guide.md
+.env
+node_modules/
+package-lock.json
+package.json
